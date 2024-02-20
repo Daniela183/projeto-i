@@ -48,13 +48,13 @@ function Esqueceu() {
 
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '25px' }} variant="body1" gutterBottom>Recuperar Senha</Typography>
-                <Typography style={{ border: '10px ', backgroundColor:'#c3dfb0', textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }} variant="body2" gutterBottom>Para recuperar a senha insira seu email no campo abaixo. </Typography>
+                <Typography style={{ borderRadius: '10px ', backgroundColor:'#8dc1ff', textAlign: 'center', fontWeight: 'bold', fontSize: '25px' }} variant="body1" gutterBottom>Recuperar Senha</Typography>
+                <Typography style={{ border: '10px ', backgroundColor:'#8dc1ff1', textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }} variant="body2" gutterBottom>Para recuperar a senha insira seu email no campo abaixo. </Typography>
                 <TextField style={{ marginBottom: '15px' }} onChange={onChangeEmail} error={emailError.length > 0} helperText={emailError} value={email} label="Email" />
-                <Button onClick={eemail} variant="contained" color="success">Enviar Email</Button>
-                <Button onClick={voltarlog} variant="outlined" color="success" style={{color: '#006400', border: '1px solid #01411C'}}>Voltar para Login</Button>
+                <Button onClick={eemail} variant="contained" color="primary">Enviar Email</Button>
+                <Button onClick={voltarlog} variant="outlined" color="primary" style={{color: '#000', border: '1px solid #23679e'}}>Voltar para Login</Button>
             </Box>
         </Box>
     );

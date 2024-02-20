@@ -3,6 +3,7 @@ import {
     redirect,
     RouterProvider,
 } from "react-router-dom";
+
 import Registrar from "../pages/Registrar";
 import Login from "../pages/Login";
 import Esqueceu from "../pages/Esqueceu";
@@ -11,20 +12,27 @@ import Configurar from "../pages/Configurar";
 import AlterarDados from "../pages/AlterarDados";
 import AlterarSenha from "../pages/AlterarSenha";
 
-const usuarioValido = () =>{
+import NivelBasico from "../pages/secoes/NivelBasico"
+import NivelIntermediario from "../pages/secoes/NivelIntermediario"
+import NivelAvancado from "../pages/secoes/NivelAvancado"
+
+import Principal from "../pages/secoes/basico/saudacao/Principal";
+import Calendario from "../pages/secoes/basico/calendario/Calendarr";
+
+const usuarioValido = () => {
     const status = localStorage.getItem('status')
-    if(status === 'autenticado'){
+    if (status === 'autenticado') {
         return redirect('/home');
     }
-   return null;
-} 
-const usuarioInvalido = () =>{
+    return null;
+}
+const usuarioInvalido = () => {
     const status = localStorage.getItem('status')
-    if(status === null || status === undefined){
+    if (status === null || status === undefined) {
         return redirect('/login');
     }
-   return null;
-} 
+    return null;
+}
 
 const router = createBrowserRouter([
     {
@@ -53,15 +61,37 @@ const router = createBrowserRouter([
         loader: usuarioInvalido
     },
     {
-        path: "/alterarDados",
+        path: "/alterar-dados",
         element: <AlterarDados />,
         loader: usuarioInvalido
     },
     {
-        path: "/alterarSenha",
+        path: "/alterar-senha",
         element: <AlterarSenha />,
         loader: usuarioInvalido
     }
+    , {
+        path: "/nivel-basico",
+        element: <NivelBasico />,
+    },
+    {
+        path: "/nivel-intermediario",
+        element: <NivelIntermediario />,
+    },
+    {
+        path: "/nivel-avancado",
+        element: <NivelAvancado />,
+    },
+    {
+        path: "/saudacoes",
+        element: <Principal />,
+    }
+    ,{
+        path: "/calendario",
+        element: <Calendario />,
+    }
+    
+
 ]);
 function Router() {
     return (

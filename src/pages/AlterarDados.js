@@ -79,16 +79,16 @@ function AlterarDados() {
     }
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Alterar os Dados</Typography>
+                <Typography style={{ borderRadius: '10px ', backgroundColor:'#8dc1ff', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Alterar os Dados</Typography>
                 <TextField onChange={onChangeNome} inputProps={{ style: { textTransform: 'capitalize'}}} error={nomeError.length > 0} helperText={nomeError} value={nome} label="Nome" />
                 <TextField onChange={onChangeEmail} error={emailError.length > 0} helperText={emailError} value={email} label="Email" />
                 <ReactInputMask mask="(99) 9999-9999" onChange={onChangeTelefone} value={telefone}>
                 <TextField  error={telefoneError.length > 0} helperText={telefoneError}  label="Telefone" />
                 </ReactInputMask>
-                <Button onClick={dados} variant="contained" color="success">Enviar</Button>
-                <Button onClick={() => handleClick('/configuracao')} variant="outlined" color="success" style={{color: '#006400'}}>Voltar para Configurações</Button>
+                <Button onClick={dados} variant="contained" color="primary">Enviar</Button>
+                <Button onClick={() => handleClick('/configuracao')} variant="outlined" color="primary" style={{color: '#000'}}>Voltar para Configurações</Button>
         
             </Box>
         </Box>

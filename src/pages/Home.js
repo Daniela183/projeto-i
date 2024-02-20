@@ -1,25 +1,30 @@
-import { Button, Box, Typography } from '@mui/material';
+import { Button, Box, Grid } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-    const row = useNavigate()
+    const navigate = useNavigate()
 
     const handleDeslogar = () => {
         localStorage.removeItem('status');
         localStorage.removeItem('user');
-        row('/login')
+        navigate('/login')
     }
+   
 
     const handleClick = (rota) => {
-        row(rota);
+        navigate(rota);
     };
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Box style={{ display: 'flex', justifyContent: 'flex-end' }}><Button size='small' onClick={() => handleClick('/configuracao')} variant="outlined body2"  color="success" style={{color: '#006400', border: '1px solid #01411C' }}>Configuração</Button></Box>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '20px', color: 'darkgreen' }} variant="body1" gutterBottom>Você está na Home</Typography>
-                <Button onClick={handleDeslogar} variant="contained" color="success">Voltar para Login</Button>
+                <Box style={{ display: 'flex', justifyContent: 'flex-end' }}><Button size='small' onClick={() => handleClick('/configuracao')} variant="outlined body2" color="primary" style={{ color: '#000', border: '1px solid #23679e' }}>Configuração</Button></Box>
+                <Box style={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', columnGap: '5px', marginTop: '15px' }}>
+                    <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-basico')} variant="contained" style={{ color: '#000' }}>Nível Básico</Button></Grid>
+                    <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-intermediario')} variant="contained" style={{ color: '#000' }}>Nível Intermediário</Button></Grid>
+                    <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-avancado')} variant="contained" style={{ color: '#000' }}>Nível Avançado</Button></Grid>
+                </Box>
+                <Button onClick={handleDeslogar} variant="contained" color="primary">Voltar para Login</Button>
             </Box>
         </Box>
     );

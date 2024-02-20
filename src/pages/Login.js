@@ -59,14 +59,14 @@ function Login() {
     }
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Login</Typography>
+                <Typography style={{ borderRadius: '10px ', backgroundColor:'#8dc1ff', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Login</Typography>
                 <TextField onChange={onChangeEmail} error={emailError.length > 0} helperText={emailError} value={email} label="Email" />
                 <TextField style={{ marginBottom: '15px'}} onChange={onChangeSenha} type='password' error={senhaError.length > 0} helperText={senhaError} value={senha} label="Senha" />
-                <Button onClick={logar} variant="contained" color="success">Entrar</Button>
-                <Button onClick={() => handleClick('/')} variant="outlined" color="success" style={{color: '#006400', border: '1px solid #01411C'}}>Não tenho cadastro</Button>
-                <Button onClick={() => handleClick('/esqueceu')} variant="outlined" color="success" style={{color: '#006400', border: '1px solid #01411C'}}>Recuperar senha</Button>
+                <Button onClick={logar} variant="contained" color="primary">Entrar</Button>
+                <Button onClick={() => handleClick('/')} variant="outlined" color="primary" style={{color: '#000', border: '1px solid #23679e'}}>Não tenho cadastro</Button>
+                <Button onClick={() => handleClick('/esqueceu')} variant="outlined" color="primary" style={{color: '#000', border: '1px solid #23679e'}}>Recuperar senha</Button>
             </Box>
         </Box>
     );

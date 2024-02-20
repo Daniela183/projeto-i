@@ -71,14 +71,14 @@ function AlterarSenha() {
     }
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '	#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Alterar Senha</Typography>
+                <Typography style={{ borderRadius: '10px ', backgroundColor:'#8dc1ff', textAlign: 'center', fontWeight: 'bold', fontSize: '25px'}}variant="body1" gutterBottom>Alterar Senha</Typography>
                 <TextField onChange={onChangeSenha} type='password' error={senhaError.length > 0} helperText={senhaError} value={senha} label="Senha" />
                 <TextField onChange={onChangeNovaSenha} type='password' error={novaSenhaError.length > 0} helperText={novaSenhaError} value={novaSenha} label="Nova senha" />
                 <TextField style={{ marginBottom: '15px'}} onChange={onChangeRepitaSenha} type='password' error={repitaSenhaError.length > 0} helperText={repitaSenhaError} value={repitaSenha} label="Repita senha" />
-                <Button onClick={sen} variant="contained" color="success">Enviar</Button>
-                <Button onClick={() => handleClick('/configuracao')} variant="outlined" color="success" style={{border: '1px solid #01411C'}}>Voltar para Configurações</Button>
+                <Button onClick={sen} variant="contained" color="primary">Enviar</Button>
+                <Button onClick={() => handleClick('/configuracao')} variant="outlined" style={{border: '1px solid #23679e', color: '#000'}}>Voltar para Configurações</Button>
             </Box>
         </Box>
     );

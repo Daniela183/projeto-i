@@ -93,9 +93,9 @@ function Registrar() {
     }
 
     return (
-        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D0F0C0', minHeight: '100vh' }}>
+        <Box style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#aee2ff', minHeight: '100vh' }}>
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
-                <Typography style={{ borderRadius: '10px ', backgroundColor:'#c3dfb2', textAlign: 'center', fontWeight: 'bold', fontSize: '25px' }} variant="body1" gutterBottom>Cadastrar</Typography>
+                <Typography style={{ borderRadius: '10px ', backgroundColor:'#8dc1ff', textAlign: 'center', fontWeight: 'bold', fontSize: '25px' }} variant="body1" gutterBottom>Cadastrar</Typography>
                 <TextField onChange={onChangeNome} inputProps={{ style: { textTransform: 'capitalize'}}} error={nomeError.length > 0} helperText={nomeError} value={nome} label="Nome" />
                 <TextField onChange={onChangeEmail} error={emailError.length > 0} helperText={emailError} value={email} label="Email" />
                 <ReactInputMask mask="(99) 9999-9999" onChange={onChangeTelefone} value={telefone}>
@@ -103,8 +103,8 @@ function Registrar() {
                 </ReactInputMask>
                 <TextField onChange={onChangeSenha} type='password' error={senhaError.length > 0} helperText={senhaError} value={senha} label="Senha" />
                 <TextField style={{ marginBottom: '15px'}} onChange={onChangeRepSenha} type='password' error={repSenhaError.length > 0} helperText={repSenhaError} value={repSenha} label="Repite a senha" />
-                <Button onClick={formulario} variant="contained" color="success">Enviar o formulário</Button>
-                <Button onClick={handleClick} variant="outlined" color="success" style={{color: '#006400', border: '1px solid #01411C'}}>Já tenho cadastro</Button>
+                <Button onClick={formulario} variant="contained" color="primary">Enviar o formulário</Button>
+                <Button onClick={handleClick} variant="outlined" color="primary" style={{color: '#000', border: '1px solid #23679e'}}>Já tenho cadastro</Button>
             </Box>
         </Box>
     );
