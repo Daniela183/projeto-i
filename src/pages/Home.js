@@ -20,6 +20,7 @@ function Home() {
             <Box style={{ display: 'flex', flexDirection: 'column', width: '250px', marginTop: '90px', rowGap: '8px' }}>
                 <Box style={{ display: 'flex', justifyContent: 'flex-end' }}><Button size='small' onClick={() => handleClick('/configuracao')} variant="outlined body2" color="primary" style={{ color: '#000', border: '1px solid #23679e' }}>Configuração</Button></Box>
                 <Box style={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', columnGap: '5px', marginTop: '15px' }}>
+                    <Grid item xs={12}> <Button onClick={() => handleClick('/sobre')} variant="contained" style={{ color: '#000' }}>Sobre o site</Button></Grid>
                     <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-basico')} variant="contained" style={{ color: '#000' }}>Nível Básico</Button></Grid>
                     <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-intermediario')} variant="contained" style={{ color: '#000' }}>Nível Intermediário</Button></Grid>
                     <Grid item xs={12}> <Button onClick={() => handleClick('/nivel-avancado')} variant="contained" style={{ color: '#000' }}>Nível Avançado</Button></Grid>
